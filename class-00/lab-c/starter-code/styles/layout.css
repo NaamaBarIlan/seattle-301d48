@@ -1,0 +1,30 @@
+/* 
+layout.css should contain general positioning on the page
+1. Apply to elements such as header, footer, nav, aside
+2. Classes and IDs can be included here*/
+
+nav, article, aside, footer section {
+    margin: 0 auto;
+    width: 900px;
+}
+  
+nav {
+    margin-top: 25px;
+}
+  
+hr {
+    clear: both;
+    border: 0;
+    height: 13px;
+    background-image: url('../img/hr.png');
+}
+
+aside {
+    padding-top: 30px;
+    padding-bottom: 60px
+}
+
+section hr {
+    border-bottom: 1px solid #eee;
+    height: 0;
+}
