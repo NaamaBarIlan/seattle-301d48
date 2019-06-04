@@ -1,0 +1,17 @@
+/* TODO add box-sizing here */
+*, *:after, *:before
+
+
+.cell {
+  height: 100px;
+  width: 100%;
+}
+
+#container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+@media(min-width: 900px){
+
+}
