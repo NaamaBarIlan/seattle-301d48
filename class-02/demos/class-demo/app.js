@@ -35,19 +35,29 @@ function loadData(){
 }
 
 function dispalyPage(snacks) {
+    const template = $('#snack-template').html();
+    // render is a function that will take unique info and render it into the markup that's waiting.
+    const render = Handlebars.compile();
 
     snacks.forEach(snack => {
-        const $newSnack = $('.snack-template').clone();
 
-        $newSnack.find('h2').text(snack.name);
-        $newSnack.find('h3').text(snack.rank);
-        $newSnack.find('p').text(snack.type);
-        $newSnack.removeClass('snack-template');
+        const snackMarkup = render(snack);
 
-        // data attributes, don't have display meaning, but have meaning for the dev:
-        $newSnack.attr('data-type', snack.type);
+        console.log(snackMarkup);
 
-        $('.snacks').append($newSnack);
+        $('.snaks').append(snackMarkup);
+
+
+        // const $newSnack = $('.snack-template').clone();
+
+        // $newSnack.find('h2').text(snack.name);
+        // $newSnack.find('h3').text(snack.rank);
+        // $newSnack.find('p').text(snack.type);
+        // $newSnack.removeClass('snack-template');
+        // // data attributes, don't have display meaning, but have meaning for the dev:
+        // $newSnack.attr('data-type', snack.type);
+
+        // $('.snacks').append($newSnack);
 
     });
 }
