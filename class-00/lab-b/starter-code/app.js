@@ -107,12 +107,22 @@ console.log('Hello from the new object function', newObject(['hi', 'hello', 'are
 // Write your solutions on a single line wherever possible.
 
 
+<<<<<<< HEAD
 let sum = (a, b, c, d) => a + b + c + d;
+=======
+
+// let sum = function(a, b, c, d) {
+//   return a + b + c + d;
+// };
+
+const sum = (a, b, c, d) => a + b + c + d;
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sum(1, 2, 3, 4));
 
 
+<<<<<<< HEAD
 let objectLit = () => ({
   key1: 'value1',
   key2: 'value2',
@@ -121,29 +131,74 @@ let objectLit = () => ({
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(objectLit());
+=======
+// let objectLit = function() {
+//   return {
+//     key1: 'value1',
+//     key2: 'value2',
+//     key3: 'value3',
+//   };
+// };
+
+const objectList = () => ({
+    key1: 'value1',
+    key2: 'value2',
+    key3: 'value3',  
+  })
 
 
+// TODO: Uncomment the following line of code to see the output in the browser console
+console.log(objectList());
+
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915
+
+// let sumAndProduct = function(a, b) {
+//   let sum = a + b;
+//   let product = a * b;
+//   return [sum, product];
+// };
+
+<<<<<<< HEAD
 let sumAndProduct = (a, b) => {
+=======
+const sumAndProduct = (a, b) => {
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915
   let sum = a + b;
   let product = a * b;
   return [sum, product];
-};
+}
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sumAndProduct(3, 9));
 
 
+<<<<<<< HEAD
 let message = (name) => `Hello, ${name}!`;
+=======
+// let message = function(name) {
+//   return `Hello, ${name}!`;
+// };
+
+const message = name => `Hello, ${name}`;
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(message('Allie'));
 
 
 let Student = function(name, age, hometown) {
-  this.name = name;
-  this.age = age;
-  this.hometown = hometown;
+  console.log('this before', this);
+  // this.name = name;
+  // this.age = age;
+  // this.hometown = hometown;
 };
+
+// const Student = (name, age, hometown ) => {
+//   this.name = name;
+//   this.age = age;
+//   this.hometown = hometown;
+// }
+//causes the code to break, can not be used as a constructor
 
 let joe = new Student('Joe', 'Schmoe', 100);
 
@@ -158,6 +213,11 @@ Student.prototype.greeting = function() {
   return `Hi, my name is ${this.name}`;
 };
 
+// Student.prototype.greeting = () => {
+//   return `Hi, my name is ${this.name}`;
+// }
+// doesn't have access to the correct this
+
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
 console.log(joe.greeting());
@@ -170,23 +230,52 @@ Student.courseName = () => 'This student is enrolled in Code 301.';
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(Student.courseName());
+<<<<<<< HEAD
 
+=======
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915
 
 
 // STEP 11
 // How do arrow functions affect constructor functions?
-Student.prototype.scope = function() {
+Student.scope = function() {
   console.log(this);
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
+<<<<<<< HEAD
 console.log(joe.scope());
+=======
+console.log('non arrow scope', Student.scope());
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915
 
-Student.prototype.scopeArrow = () => console.log(this);
+Student.prototype.scopeArrow = () => this;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
+<<<<<<< HEAD
 console.log(joe.scopeArrow());
+=======
+console.log('scope arrow', joe.scopeArrow());
 
+const test = () => {
+  console.log('test', this);
+  return 
+}
+
+test();
+
+const functionTest = function() {
+  console.log('function test', this)
+}
+
+functionTest();
+
+function declarationTest(){
+  console.log('declaration test', this);
+}
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915
+
+declarationTest();
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
 //    When joe.scope()is invoked "this" refers to the context of the "Student" instance.

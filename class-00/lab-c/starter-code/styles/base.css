@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 /* Base.css should contain any general styling on top of what is provided by a reset.css or normalize.css file (these files will be discussed in further detail in lecture)
 1. Apply to elements such as body and main
 2. Examples include styling of overall font and background color */
 
 @import url('https://fonts.googleapis.com/css?family=Abel|Oswald:700|Yellowtail|Patrick+Hand');
+=======
+@import url("https://fonts.googleapis.com/css?family=Abel|Oswald:700|Yellowtail|Patrick+Hand");
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915
 
 * {
   font-family: times;
